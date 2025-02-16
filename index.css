@@ -244,7 +244,7 @@ button {
   /* mix-blend-mode: difference;
   color: #ffffff; */
   /* background-color: #febfff; */
-  opacity: 0.8;
+  /* opacity: 0.8; */
   /* background-image:  repeating-linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff), repeating-linear-gradient(45deg, #ffffff 25%, #febfff 25%, #febfff 75%, #ffffff 75%, #ffffff);
   background-position: 0 0, 4px 4px;
   background-size: 8px 8px; */
@@ -254,11 +254,11 @@ button {
                     repeating-linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff); */
   /* background-image: repeating-linear-gradient(45deg, transparent 25%, #ffffff 25%, #ffffff 75%, transparent 75%, transparent), 
                     repeating-linear-gradient(45deg, transparent 25%, #ffffff 25%, #ffffff 75%, transparent 75%, transparent); */
-  background-image: repeating-linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff), 
+  /* background-image: repeating-linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff), 
                     repeating-linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff);
   
   background-position: 0 0, 1px 1px;
-  background-size: 2px 2px;
+  background-size: 2px 2px; */
 }
 
 #page2 {
