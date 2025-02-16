@@ -1,0 +1,134 @@
+/* font: import ================================================ */
+@font-face {
+  font-family: 'NeueHaasGroteskText-Regular';
+  src: url('./font/NeueHaasGroteskText-Regular.woff') format('woff');
+  src: url('./font/NeueHaasGroteskText-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'FKGroteskMonoTrial-Regular';
+  src: url('./font/FKGroteskMonoTrial-Regular.woff') format('woff');
+  src: url('./font/FKGroteskMonoTrial-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'FKGroteskSemiMonoTrial-Regular';
+  src: url('./font/FKGroteskSemiMonoTrial-Regular.woff') format('woff');
+  src: url('./font/FKGroteskSemiMonoTrial-Regular.woff2') format('woff2');
+}
+
+
+/* text: drag color ================================================ */
+::selection {
+  color: #c3a0ff;
+  background: white;
+}
+
+::-moz-selection { 
+  color: #c3a0ff;
+  background: white;
+}
+
+
+/* default ================================================ */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #ffffff;
+  /* color: #000000;
+  text-shadow: 0 0px 6px yellow; */
+}
+
+b {
+  font-weight: normal;
+  background: #000000;
+  color: #ffffff;
+}
+
+
+/* font: menu ================================================ */
+.font-menu{
+  font-family: NeueHaasGroteskText-Regular,sans-serif;
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
+  /* font-size: 14.4px; */
+  /* letter-spacing: 0.027em;
+  text-transform: uppercase;
+  padding-right: 8px !important; */
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  text-shadow: 0 0px 6px yellow;
+}
+
+
+/* font: description ================================================ */
+
+h1 {
+  font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
+  font-size: 14.4px;
+  letter-spacing: 0.027em;
+  /* font-size: 37.7px; */
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 20px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: normal;
+  text-align: left;
+  /* color: #000000; */
+  padding: 0;
+  /* padding: 0 40px 0 40px; */
+}
+
+h1:hover {
+  color: white !important;
+  /* color: black !important; */
+  /* text-shadow: 0 0px 6px yellow; */
+}
+
+h4 {
+  font-family: NeueHaasGroteskText-Regular,sans-serif;
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
+  font-size: 16px;
+  /* font-size: 14.4px; */
+  letter-spacing: 0.027em;
+  /* font-size: 37.7px; */
+  margin-block-start: 0;
+  margin-block-end: 20px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: normal;
+  text-align: left;
+  /* color: #000000; */
+  padding: 0;
+  /* padding: 0 40px 0 40px; */
+  /* text-shadow: 0 0 2px #000000; */
+  text-shadow: 0 0 1px #ffff00;
+}
+
+p {
+  font-family: NeueHaasGroteskText-Regular,sans-serif;
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
+  font-size: 16px;
+  /* font-size: 14.4px; */
+  letter-spacing: 0.027em;
+  /* font-size: 37.7px; */
+  margin-block-start: 0;
+  margin-block-end: 20px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: normal;
+  text-align: left;
+  /* color: #000000; */
+  padding: 0;
+  /* padding: 0 40px 0 40px; */
+  /* text-shadow: 0 0 2px #000000; */
+  text-shadow: 0 0 1px #ffff00;
+}
