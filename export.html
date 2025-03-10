@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inter–Print</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎹</text></svg>"> -->
+    
+    <!-- css -->
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_media.css">
+
+    <!-- script: Masonry -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- script: index_ie.js -->
+    <script type="text/javascript" src="index_ie.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.1.135/jspdf.min.js"></script>
+  </head>
+  
+  <body>
+
+    <style>
+      /* .my-svg {
+        fill: blue;
+        stroke: black;
+        stroke-width: 2px;
+      } */
+
+      .checker-square {
+        fill: red;
+      }
+    </style>
+    
+    <!-- <svg width="612" height="792" viewBox="0 0 612 792" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="checkerboard" width="8" height="8" patternUnits="userSpaceOnUse">
+          <rect width="4" height="4" fill="black"/>
+          <rect x="4" y="4" width="4" height="4" fill="black"/>
+        </pattern>
+      </defs>
+      <rect width="612" height="792" fill="url(#checkerboard)"/>
+    </svg> -->
+    
+    
+    <button id="downloadBtn">SVG 다운로드</button>
+    <svg id="checkerboard" width="612" height="792" viewBox="0 0 612 792" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="checkerboardPattern" width="8" height="8" patternUnits="userSpaceOnUse">
+          <rect class="checker-square" width="4" height="4"/>
+          <rect class="checker-square" x="4" y="4" width="4" height="4"/>
+        </pattern>
+      </defs>
+      <rect width="612" height="792" fill="url(#checkerboardPattern)"/>
+    </svg>
+    
+
+    <button id="cmd">generate PDF</button>
+
+
+<script>
+  document.getElementById("downloadBtn").addEventListener("click", function() {
+    const svg = document.getElementById("checkerboard");
+
+    // 1️⃣ SVG 내부에 <style> 태그 추가
+    const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+    style.textContent = ".checker-square { fill: red; }"; // 원하는 색상 지정
+    svg.insertBefore(style, svg.firstChild); // SVG 내부에 추가
+
+    // 2️⃣ SVG를 문자열로 변환하여 다운로드
+    const svgData = new XMLSerializer().serializeToString(svg);
+    const blob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "checkerboard.svg";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    // 3️⃣ 다운로드 후 스타일 태그 제거 (화면에서 중복 적용 방지)
+    svg.removeChild(style);
+  });
+</script>
+
+
+    <!-- <script>
+      document.getElementById("downloadBtn").addEventListener("click", function() {
+        const svg = document.getElementById("checkerboard");
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const blob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+    
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "checkerboard.svg";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    </script> -->
+    
+
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+
+
+
+
